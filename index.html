@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Documentation Page</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+</head>
+<body>
+    <div class="menu">
+        <i class="fas fa-hamburger"></i>
+    </div>
+    <div class="container">
+        <header class="header">
+            <nav class="nav-bar">
+                <div class="back">
+                    <i class="fas fa-times"></i>
+                </div>
+                <div class="nav-heading">PHP Documentation</div>
+                <ul>
+                    <li><a href="#intro">Introduction</a></li>
+                    <li><a href="#variables">Variables</a></li>
+                    <li><a href="#echo">Echo and print Statements</a></li>
+                    <li><a href="#data_types">Data Types</a></li>
+                    <li><a href="#constants">Constants</a></li>
+                    <li><a href="#operators">Operators</a></li>
+                    <li><a href="#conditional_statement">If...Elseif...Else Statements</a></li>
+                    <li><a href="#switch">Switch</a></li>
+                    <li><a href="#loop">Loops</a></li>
+                    <li><a href="#function">Functions</a></li>
+                    <li><a href="#arrays">Arrays</a></li>
+                    <li><a href="#reference">Reference</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <main id="main-doc">
+        <section id="intro" class="main-section">
+            <div class="section-heading">PHP Introduction</div>
+            <div class="section-content">
+                PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used open source general-purpose scripting language that is especially suited for web development and can be embedded into HTML.
+            </div>
+            <p class="section-heading">What You Should Know</p>
+            <p class="intro-content">This guide assumes you have the following basic background:</p>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+        </section>
+        <section id="variables" class="main-section">
+            <div class="section-heading">PHP Variables</div>
+            <div class="section-content">
+                Variables are "containers" for storing information.
+                <br>
+                In PHP, a variable starts with the <q>$</q> sign, followed by the name of the variable:
+            </div>
+           <div class="example">
+               <code>< ?php</code> 
+                <br>
+                $txt = "Hello world!";
+                <br>
+                $x = 5;
+                <br>
+                $y = 10.5;
+                <br>
+                ?>
+           </div>    
+        </section>
+        <section id="echo" class="main-section">
+            <div class="section-heading">PHP Echo And Print Statements</div>
+            <div class="section-content">
+                With PHP, there are two basic ways to get output: echo and print.
+                <br>
+                echo and print are more or less the same. They are both used to output data to the screen.
+                The differences are small: echo has no return value while print has a return value of 1 so it can be used in expressions. echo can take multiple parameters (although such usage is rare) while print can take one argument. echo is marginally faster than print.
+            </div>
+           <div class="example">
+               <code>< ?php</code>
+               <br> 
+               echo "PHP is Fun!";
+               <br>
+               echo "Hello world!";<br>
+               echo "I'm about to learn PHP!";<br>
+               echo "This ", "string ", "was ", "made ", "with multiple parameters.";
+               <br>
+                ?>
+           </div>    
+        </section>
+        <section id="data_types" class="main-section">
+            <div class="section-heading">PHP Data Types</div>
+            <div class="section-content">
+                Variables can store data of different types, and different data types can do different things.
+                <br>
+                <ul>
+                    <li>String</li>
+                    <li>Integer</li>
+                    <li>Float (floating point numbers - also called double)</li>
+                    <li>Boolean</li>
+                    <li>Array</li>
+                    <li>Object</li>
+                    <li>NULL</li>
+                </ul>
+            </div>
+            <div class="section-heading">-String</div>
+            <div class="section-content">
+                Strings are letters. <br>
+                A string is a sequence of characters, like "Hello world!". <br>
+                A string can be any text inside quotes. You can use single or double quotes
+            </div>
+           <div class="example">
+               <code>< ?php</code><br>
+               $word = "PHP is Fun!";
+               <br> 
+               echo $word;
+               <br>
+                ?>
+           </div> 
+           <div class="section-heading">-Integer</div>
+           <div class="section-content">
+            Integers are numbers.
+          </div>
+           <div class="example">
+               <code>< ?php</code><br>
+               $num = 13;
+               <br> 
+               echo $num;
+               <br>
+                ?>
+           </div>   
+           <div class="section-heading">-Float</div>
+           <div class="section-content">
+            Floats  is a number with a decimal point or a number in exponential form.
+           </div>
+           <div class="example">
+               <code>< ?php</code><br>
+               $num2 = 13.4;
+               <br> 
+               echo $num2;
+               <br>
+                ?>
+           </div>  
+           <div class="section-heading">-Boolean</div>
+           <div class="section-content">
+            Bolean is a true/false, they are often used in conditional testing.
+           </div>
+           <div class="example">
+               <code>< ?php</code><br>
+               $x = true;
+               <br> 
+               $y = false;
+               <br>
+                ?>
+           </div> 
+           <div class="section-heading">-Array</div>
+           <div class="section-content">
+            An array stores multiple values in one single variable.
+           </div>
+           <div class="example">
+               <code>< ?php</code><br>
+               $cars = array("Volvo","BMW","Toyota");<br>
+               var_dump($cars);
+               <br>
+                ?>
+           </div>       
+           <div class="section-heading">-Object</div>
+           <div class="section-content">
+            An object is a data type which stores data and information on how to process that data. <br>
+            In PHP, an object must be explicitly declared. <br>
+            First we must declare a class of object. For this, we use the class keyword. A class is a structure that can contain properties and methods:
+           </div>
+           <div class="example">
+               <code>< ?php</code><br>
+               class Car {<br>
+                function Car() {<br>
+                  $this->model = "VW";<br>
+                } <br>
+              } <br>
+              <span>// create an object</span><br>
+              $herbie = new Car();<br>
+              
+              <span>// show object properties</span><br>
+              echo $herbie->model;
+               <br>
+                ?>
+           </div>       
+           <div class="section-heading">-NULL</div>
+           <div class="section-content">
+            
+           </div>
+           <div class="example">
+               <code>< ?php</code><br>
+               $x = "Hello world!";<br>
+               $x = null;<br>
+               var_dump($x);<br>
+                ?>
+           </div>       
+        </section>
+        <section id="constants" class="main-section">
+            <div class="section-heading">PHP Constants</div>
+            <div class="section-content">
+                Constants are like variables except that once they are defined they cannot be changed or undefined.
+                <br>
+                <div class="section-heading">Parameters</div> 
+                <ul>
+                    <li>name: Specifies the name of the constant</li>
+                    <li>value: Specifies the value of the constant</li>
+                    <li>case-insensitive: Specifies whether the constant name should be case-insensitive. Default is false</li>
+                </ul>
+            </div>
+           <div class="example">
+               <code>< ?php</code>
+               <br> 
+               define("GREETING", "Hello World");
+               <br>
+               echo GREETING;
+               <br>
+                ?>
+           </div>    
+        </section>
+        <section id="operators" class="main-section">
+            <div class="section-heading">PHP Operators</div>
+            <div class="section-content">
+                Operators are used to perform operations on variables and values.
+                <br>
+                <div class="section-heading">PHP divides the operators in the following groups:</div> 
+                <ul>
+                    <li>Arithmetic operators</li>
+                    <li>Assignment operators</li>
+                    <li>Comparison operators</li>
+                    <li>Increment/Decrement operators</li>
+                    <li>Logical operators</li>
+                </ul>
+            </div>
+            <div class="section-heading">Arithmetic operators</div>	
+           <div class="example">
+               <code>< ?php</code>
+               <br> 
+               +	Addition	$x + $y	;
+               <br>
+               -	Subtraction	$x - $y;
+               <br>
+               &times; Multiplication	$x &times; $y;
+               <br>
+               /	Division	$x / $y;
+               <br>
+               %	Modulus	$x % $y	Remainder of $x divided by $y;
+               <br>
+                ?>
+           </div>
+           <div class="section-heading">Assignment operators</div>	
+           <div class="example">
+               <code>< ?php</code>
+               <br> 
+               x = y	x = y;
+               <br>
+               x += y	x = x + y;
+               <br>
+                ?>
+           </div>
+           <div class="section-heading">Comparison operators</div>	
+           <div class="example">
+               <code>< ?php</code>
+               <br> 
+               ==	Equal	$x == $y	Returns true if $x is equal to $y;
+               <br>
+               ===	Identical	$x === $y	Returns true if $x is equal to $y, and they are of the same type;
+               <br> 
+               !=	Not equal	$x != $y	Returns true if $x is not equal to $y;
+               <br>
+               !==	Not identical	$x !== $y	Returns true if $x is not equal to $y, or they are not of the same type;
+               <br>
+               &gt;	Greater than	$x > $y	Returns true if $x is greater than $y;
+               <br>
+               &lt;	Less than	$x < $y	Returns true if $x is less than $y;
+               <br>
+               &gt;=	Greater than or equal to	$x >= $y	Returns true if $x is greater than or equal to $y;
+               <br>
+               &lt;=	Less than or equal to	$x <= $y;
+               <br>
+                ?>
+           </div>
+           <div class="section-heading">Increment/Decrement operators</div>	
+           <div class="example">
+               <code>< ?php</code>
+               <br> 
+               ++$x	Pre-increment	Increments $x by one, then returns $x;
+               <br>
+               $x++	Post-increment	Returns $x, then increments $x by one;
+               <br>
+               --$x	Pre-decrement	Decrements $x by one, then returns $x
+               <br>
+               $x--	Post-decrement	Returns $x, then decrements $x by one
+               <br>
+                ?>
+           </div>
+           <div class="section-heading">Logical operators</div>	
+           <div class="example">
+               <code>< ?php</code>
+               <br> 
+               and/&&	And	$x and/&& $y	True if both $x and $y are true;
+               <br>
+               or/||	Or	$x or/|| $y	True if either $x or $y is true;
+               <br>
+               !	!$y	True if $x is not true;
+               <br>
+                ?>
+           </div>
+        </section>
+        <section id="conditional_statement" class="main-section">
+            <div class="section-heading">PHP If...Elseif...Else Statements</div>
+            <div class="section-content">
+                Conditional statements are used to perform different actions based on different conditions.
+                <br>
+                Very often when you write code, you want to perform different actions for different conditions. You can use conditional statements in your code to do this.
+                <br>
+                <div class="section-heading">In PHP we have the following conditional statements:</div> 
+                <ul>
+                    <li>If</li>
+                    <li>ElseIf</li>
+                    <li>Else</li>
+                </ul>
+            </div>
+            <div class="section-heading">If statement</div>
+            <p class="section-content">if statement - executes some code if one condition is true.</p>
+           <div class="example">
+               <code>< ?php</code>
+               <br> 
+               $t = date("H");
+                <br>
+                if ($t < "20") {<br>
+                 echo "Have a good day!";<br>
+                }
+               <br>
+                ?>
+           </div>    
+           <div class="section-heading">ElseIf statement</div>
+           <p class="section-content">ElseIf statement executes different codes for more than two conditions.</p>
+          <div class="example">
+              <code>< ?php</code>
+              <br> 
+              $t = date("H");
+               <br>
+               if ($t < "20") {<br>
+                echo "Have a good morning!";<br>
+               }elseif{
+              <br>
+              echo "Have a good day!";<br>
+               }else{<br>
+                echo "have a good night";
+                <br>
+               ?>
+          </div>    
+          <div class="section-heading">Else statement</div>
+          <p class="section-content">Else statement executes some code if a condition is true and another code if that condition is false.</p>
+         <div class="example">
+             <code>< ?php</code>
+             $t = date("H");
+             <br>
+             if ($t < "20") {<br>
+              echo "Have a good day!";<br>
+             }else{
+            <br>
+                echo "have a good night";
+             <br>
+              ?>
+         </div>    
+        </section>
+        <section id="switch" class="main-section">
+            <div class="section-heading">PHP Switch</div>
+            <div class="section-content">
+                The switch statement is used to perform different actions based on different conditions.
+                <br>
+            </div>
+           <div class="example">
+               <code>< ?php</code><br>
+               $favcolor = "red";<br>
+                switch ($favcolor) {<br>
+                case "red":<br>
+                    echo "Your favorite color is red!";<br>
+                    break;<br>
+                case "blue":<br>
+                    echo "Your favorite color is blue!";<br>
+                    break;<br>
+                case "green":<br>
+                    echo "Your favorite color is green!";<br>
+                    break;<br>
+                default:<br>
+                    echo "Your favorite color is neither red, blue, nor green!";<br>
+                }<br>
+                ?>
+           </div>    
+        </section>
+        <section id="loop" class="main-section">
+            <div class="section-heading">PHP Loops</div>
+            <div class="section-content">
+                Loops are used to execute the same block of code again and again, as long as a certain condition is true.
+                <br>
+                <div class="section-heading">In PHP, we have the following loop types:</div> 
+                <ul>
+                    <li>while </li>
+                    <li>do...while</li>
+                    <li>for</li>
+                    <li>forEach</li>
+                </ul>
+            </div>
+            <div class="section-heading">Do...While Loop</div>
+            <p class="section-content">loops through a block of code once, and then repeats the loop as long as the specified condition is true</p>
+           <div class="example">
+               <code>< ?php</code>
+               <br> 
+               $x = 1;<br>
+                do {<br>
+                echo "The number is: $x ";<br>
+                $x++;<br>
+                } while ($x <= 5);
+               <br>
+                ?>
+           </div>   
+           <div class="section-heading">While Loop</div>
+            <p class="section-content">loops through a block of code as long as the specified condition is true</p>
+           <div class="example">
+               <code>< ?php</code>
+               <br> 
+               $x = 1;
+                <br>
+                while($x <= 5) {<br>
+                echo "The number is: $x";<br>
+                $x++;<br>
+                }
+               <br>
+                ?>
+           </div>    
+           <div class="section-heading">For Loop</div>
+            <p class="section-content">loops through a block of code a specified number of times</p>
+           <div class="example">
+               <code>< ?php</code>
+               <br> 
+               for(i = 0, i <= 10, i++){<br>
+                echo "The number is: $x";<br>
+               }
+               <br>
+                ?>
+           </div>    
+           <div class="section-heading">ForEach Loop</div>
+            <p class="section-content"> loops through a block of code for each element in an array</p>
+           <div class="example">
+               <code>< ?php</code>
+               <br> 
+               $colors = array("red", "green", "blue", "yellow");
+                <br>
+                foreach ($colors as $value) {<br>
+                echo "$value";
+               <br>
+                ?>
+           </div>     
+        </section>
+        <section id="function" class="main-section">
+            <div class="section-heading">PHP Functions</div>
+            <div class="section-content">
+                The real power of PHP comes from its functions..
+                <br>
+                <div class="section-heading">PHP User Defined Functions</div> 
+                <ul>
+                    <li>A function is a block of statements that can be used repeatedly in a program.</li>
+                    <li>A function will not execute automatically when a page loads.</li>
+                    <li>A function will be executed by a call to the function.</li>
+                </ul>
+            </div>
+           <div class="example">
+               <code>< ?php</code>
+               <br> 
+               function writeMsg() {<br>
+                echo "Hello world!";<br>
+              }
+              <br>
+              writeMsg();<span>// call the function</span>
+               <br>
+                ?>
+           </div>    
+        </section>
+        <section id="arrays" class="main-section">
+            <div class="section-heading">PHP Arrays</div>
+            <div class="section-content">
+                An array stores multiple values in one single variable.
+            </div>
+           <div class="example">
+               <code>< ?php</code>
+               <br> 
+               $cars = array("Volvo", "BMW", "Toyota");<br>
+               echo "I like " . $cars[0] . ", " . $cars[1] . " and " . $cars[2] . ".";
+               <br>
+                ?>
+           </div>    
+        </section>
+        <section id="reference" class="main-section">
+            <div class="section-heading">PHP Reference</div>
+            <div class="section-content">
+               <ul>
+                   <li>All the documentation in this page is taken from <a href="https://www.w3schools.com/php" target="_blank">W3school</a>.</li>
+               </ul>  
+           </div>    
+        </section>
+    </main>
+    <script src="js/main.js"></script>
+</body>
+</html>
